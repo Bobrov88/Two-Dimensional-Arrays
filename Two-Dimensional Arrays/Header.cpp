@@ -193,7 +193,7 @@ void erase(T**& _array, int& rows, int& cols, bool _delete_rows, int _from_where
 template<typename T>
 void pop_back(T**& _array, int& rows, int& cols, bool _delete_rows)
 {
-	erase(_array, rows, cols, _delete_rows, _delete_rows ? rows : cols);
+	erase(_array, rows, cols, _delete_rows, _delete_rows ? rows - 1 : cols - 1);
 }
 
 template<typename T>
